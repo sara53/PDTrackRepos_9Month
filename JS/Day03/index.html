@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="parent" id="parent">
+			<h1 id="head1">First Header</h1>
+			<p class="content myP">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti fuga
+				nulla pariatur, voluptates animi dolores laudantium enim nobis
+				perspiciatis voluptate quas aliquam dolorem aspernatur, sit eligendi
+				placeat. Dignissimos, quo facere?
+			</p>
+			<button onclick="changeStyle()" id="btn">Show More !!</button>
+		</div>
+		<!-- <p id="result"><span>this is a span</span></p> -->
+		<div class="parent">
+			<h1 id="head2">Our Product</h1>
+			<p class="content">
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem
+				exercitationem laudantium accusamus, incidunt blanditiis commodi modi
+				nostrum totam, et labore omnis distinctio aspernatur dignissimos, porro
+				itaque aliquam similique aliquid! Reiciendis.
+			</p>
+		</div>
+		<div id="myForm">
+			<!-- <a href="#google">google</a>
+			<a href="#">twiiter</a> -->
+			<!-- <img src="./1.jpg" alt="" /> -->
+			<input
+				oninput="showResult()"
+				id="input1"
+				value=""
+				type="text"
+				placeholder="Enter Your Name"
+			/>
+			<p id="output"></p>
+			<!-- <button onclick="showResult()">Show</button> -->
+			<label for="">
+				Yes
+
+				<input type="radio" value="yes" name="choose" />
+			</label>
+			<label for="">
+				No
+
+				<input type="radio" value="no" name="choose" />
+			</label>
+			<label for="">
+				None
+				<input type="radio" value="none" name="choose" />
+			</label>
+
+			<button onclick="showAnswer()">Show Answer</button>
+		</div>
+		<script src="./demo.js"></script>
+	</body>
+</html>

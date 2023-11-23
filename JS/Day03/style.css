@@ -1,0 +1,40 @@
+body{
+    background-color: #eee;
+}
+
+div{
+    background-color: #aaa;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+button{
+    background-color: blueviolet;
+    border:none
+    ;padding:5px
+;cursor: pointer;
+display: block;
+}
+p{
+    background-color: #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.myP{
+    font-size: 20px;
+}
+input{
+    display: block;
+    border: none;
+    outline: 0;
+    padding: 5px;
+    border-radius: 4px;
+}
+.jsClass{
+    background-color: #3d1c72;
+    color:#fff;
+    padding: 20px;
+}
+
