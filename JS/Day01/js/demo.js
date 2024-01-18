@@ -212,3 +212,11 @@
 // result
 // 	? document.writeln("You deleted this item")
 // 	: document.writeln("Operation cancelled");
+/**========== */
+
+function test(fname) {
+	fname = fname ?? "Sara";
+	console.log(fname);
+}
+
+test(null);
