@@ -1,0 +1,12 @@
+1- install nodejs
+2- npm i -g @angular/cli
+3- ng new projectName
+4- ng serve 
+ == ng serve -o 
+	-- npm Start
+
+===================== to generate component ================
+== ng g c componentName --skip-tests --flat
+=============================================================
+
+== npm i bootstrap
