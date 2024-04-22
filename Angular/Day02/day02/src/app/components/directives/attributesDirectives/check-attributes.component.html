@@ -1,0 +1,37 @@
+<div class="bg-dark p-5 text-light">
+  <h1>Attributes</h1>
+
+  <!-- <p [class.testSuccess]="flag" class="text-light rounded p-2">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto aut magni
+    error ducimus modi id libero maiores dolore quaerat, facilis et tempore
+    officiis sit sapiente, perspiciatis corporis nemo voluptates eveniet!
+  </p> -->
+  <!-- <p
+    [ngClass]="{
+      'bg-success p-4': flag,
+      'bg-danger': !flag
+    }"
+    class="text-light rounded"
+  >
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto aut magni
+    error ducimus modi id libero maiores dolore quaerat, facilis et tempore
+    officiis sit sapiente, perspiciatis corporis nemo voluptates eveniet!
+  </p> -->
+  <!-- <p [style.color]="flag ? 'red' : 'green'" class="rounded">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto aut magni
+    error ducimus modi id libero maiores dolore quaerat, facilis et tempore
+    officiis sit sapiente, perspiciatis corporis nemo voluptates eveniet!
+  </p> -->
+  <p
+    [ngStyle]="{
+      color: flag ? '#fff' : '#f00',
+      backgroundColor: flag ? 'red' : 'orange'
+    }"
+    class="rounded"
+  >
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto aut magni
+    error ducimus modi id libero maiores dolore quaerat, facilis et tempore
+    officiis sit sapiente, perspiciatis corporis nemo voluptates eveniet!
+  </p>
+  <button (click)="toggle()" class="btn btn-info">Toggle</button>
+</div>

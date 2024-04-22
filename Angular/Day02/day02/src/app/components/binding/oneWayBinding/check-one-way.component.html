@@ -1,0 +1,8 @@
+<div class="bg-dark p-5 text-light text-center">
+  <h1>{{ flag ? "PD Track" : "OS Track" }}</h1>
+  <img src="assets/imgs/{{ imgSrc1 }}" alt="" />
+  <img [src]="imgSrc2" alt="" />
+  <hr />
+
+  <button (click)="clickHandler()" class="btn btn-danger">Click</button>
+</div>

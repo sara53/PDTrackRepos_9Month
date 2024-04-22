@@ -1,0 +1,26 @@
+1- One Way Binding  
+    -- interpolation
+    -- Attribute Binding
+
+2- Two Way Binding
+    -- Normal Way 
+    -- FormsModules
+
+-- Event Binding
+-- Set Reference on any Element
+-- ViewChild (Search)
+3- Directives
+    -- Structural Directives    
+        == *ng For -- *ngIf -- *ngSwitch
+
+    -- Attribute Directives
+        -- [ngClass] [ngStyle][style.prop][class.className]
+
+    -- Component Directives
+
+-- Control Flow 
+    (for,if,Switch)
+
+    
+
+/*Slider -- Login Form -- TodosList*/

@@ -1,0 +1,62 @@
+<div class="bg-dark p-5 text-light">
+  <h1 class="text-warning text-center">Structural Directives</h1>
+  <div class="container mt-3">
+    <button (click)="toggle()" class="btn btn-info">Toggle</button>
+
+    <!-- <ng-container *ngIf="flag">
+      <div
+        *ngFor="
+          let x of names;
+          let i = index;
+          let count = count;
+          let first = first
+        "
+        class="bg-light m-3 p-3 rounded text-dark"
+      >
+        <h1 class="bg-secondary p-3">#{{ i + 1 }} Welcome : {{ x }}</h1>
+        <p class="lead text-success">
+          Totla Numbers of Elements are : {{ count }}
+        </p>
+        <p class="lead text-danger">Is this the First Element ?: {{ first }}</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas enim
+          placeat error sit aliquid officiis, obcaecati nam ea ab inventore
+          veniam ut, possimus, est dignissimos doloribus consequuntur culpa eius
+          suscipit!
+        </p>
+      </div>
+    </ng-container> -->
+
+    <div [ngSwitch]="color">
+      <div *ngSwitchCase="'red'" class="bg-danger p-3 rounded m-2">
+        Your Fav Color is : red
+      </div>
+      <div *ngSwitchCase="'green'" class="bg-success p-3 rounded m-2">
+        Your Fav Color is : green
+      </div>
+      <div *ngSwitchCase="'blue'" class="bg-primary p-3 rounded m-2">
+        Your Fav Color is : blue
+      </div>
+      <div *ngSwitchDefault class="bg-light text-dark p-3 rounded m-2">
+        You Don't have any fav colors
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="bg-dark p-5 text-light">
+  <h1 class="text-warning text-center">Structural Directives</h1>
+  <div class="container mt-3">
+    <div class="bg-light m-3 p-3 rounded text-dark">
+      <p *ngIf="flag; else mySection" class="bg-secondary p-3 rounded">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas enim
+        placeat error sit aliquid officiis, obcaecati nam ea ab inventore veniam
+        ut, possimus, est dignissimos doloribus consequuntur culpa eius
+        suscipit!
+      </p>
+      <ng-template #mySection>
+        <p class="alert alert-danger">Else Section</p>
+      </ng-template>
+      <button (click)="toggle()" class="btn btn-info">Toggle</button>
+    </div>
+  </div>
+</div> -->

@@ -1,0 +1,36 @@
+<div class="bg-dark p-5 text-light text-center">
+  <h1 #myH1 class="text-warning">Two Way Binding</h1>
+  <div class="container mt-3">
+    <input
+      (input)="getData($event)"
+      type="text"
+      class="form-control"
+      placeholder="Enter Your Data"
+    />
+
+    <p class="mt-4 lead fs-3">Your Data : {{ inputValue }}</p>
+  </div>
+</div>
+<div class="alert alert-secondary p-5 text-dark text-center">
+  <h1 class="t">Two Way Binding</h1>
+  <div class="container mt-3">
+    <input
+      [(ngModel)]="testValue"
+      type="text"
+      name="check"
+      class="form-control"
+      placeholder="Enter Your Data"
+    />
+
+    <p class="mt-4 lead fs-3">Your Data : {{ testValue }}</p>
+    <select name="courses" [(ngModel)]="selectValue">
+      <option>Html</option>
+      <option>Css</option>
+      <option>JS</option>
+    </select>
+    <p class="bg-dark text-light p-3 mt-2">
+      Your Fav Course is :
+      <strong class="text-danger">{{ selectValue }}</strong>
+    </p>
+  </div>
+</div>
