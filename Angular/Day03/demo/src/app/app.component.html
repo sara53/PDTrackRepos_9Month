@@ -1,0 +1,16 @@
+<div class="bg-dark p-5 text-light">
+  <h1 class="text-center text-warning">App Component</h1>
+
+  <!-- <p class="fs-4">{{ "testValue" | changepipvalue : "$pd" : "OS" }}</p>
+  <p>{{ 1234 | currency : "eur" }}</p>
+  <p>{{ "welcome pd track" | uppercase }}</p> -->
+  <!-- <p>{{ "welcome pd track" | changepipvalue : "mostafa" | lowercase }}</p> -->
+  <!-- <p>{{ "welcome pd track" | date:"mm-yy" }}</p> -->
+  <!-- <app-login [loginData]="appData" [contentData]="dataFromContent"></app-login> -->
+  <!-- <app-content (contentEvent)="getData($event)"></app-content> -->
+  <h3>Data From Content : {{ dataFromContent }}</h3>
+  <button (click)="ChangeData()">Change Data</button>
+  <app-login [loginData]="'ali'" [myFlag]="flag"></app-login>
+  <!-- <app-login [loginData]="'ali'" [myFlag]="!flag"></app-login> -->
+</div>
+<!-- <app-products></app-products> -->
