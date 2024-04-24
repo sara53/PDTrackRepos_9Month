@@ -1,0 +1,48 @@
+<div class="container mt-5">
+  <h1 class="my-2 text-muted text-center">
+    {{ productId == 0 ? "Add Product" : "Edit Product" }}
+  </h1>
+  <form (submit)="productHandler()">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Product Name</label>
+      <input
+        type="text"
+        name="productName"
+        [(ngModel)]="name"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        placeholder="Enter Product Name"
+      />
+      <div id="emailHelp" class="form-text">
+        We'll never share your email with anyone else.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Price</label>
+      <input
+        type="number"
+        name="price"
+        [(ngModel)]="price"
+        class="form-control"
+        id="exampleInputPassword1"
+        placeholder="Enter Product Price"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword6" class="form-label">Quantity</label>
+      <input
+        name="quantity"
+        [(ngModel)]="quantity"
+        type="number"
+        class="form-control"
+        id="exampleInputPassword6"
+        placeholder="Enter Product Quantity"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-success">
+      {{ productId == 0 ? "Add Product" : "Edit Product" }}
+    </button>
+  </form>
+</div>
