@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "productName": "Book From Server",
+      "price": "400",
+      "quantity": 20
+    },
+    {
+      "id": "3",
+      "productName": "Watch From Server updated",
+      "price": "400",
+      "quantity": 20
+    },
+    {
+      "id": "4",
+      "productName": "Mouse From Server",
+      "price": "400",
+      "quantity": 20
+    },
+    {
+      "id": "05f5",
+      "productName": "Laptop2",
+      "price": "44",
+      "quantity": "55"
+    }
+  ]
+}
