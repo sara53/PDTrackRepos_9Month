@@ -1,8 +1,11 @@
 import React from 'react'
 import { Container, Nav, Navbar } from 'react-bootstrap'
+import { useSelector } from 'react-redux'
 import { Link, NavLink } from 'react-router-dom'
 
 export function MyNav() {
+
+    const { count } = useSelector( state => state.mySlice )
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
             <Container>
@@ -12,7 +15,7 @@ export function MyNav() {
                     <Nav className="ms-auto">
                         <NavLink className={( { isActive } ) => isActive ? 'text-success nav-link' : 'nav-link'} to="/">Home</NavLink>
                         <NavLink className={( { isActive } ) => isActive ? 'text-success nav-link' : 'nav-link'} to="/products">Products</NavLink>
-                        <NavLink className={( { isActive } ) => isActive ? 'text-success nav-link' : 'nav-link'} to="/fff">Login</NavLink>
+                        <NavLink className={( { isActive } ) => isActive ? 'text-success nav-link' : 'nav-link'} to="/counter">Counter ({count})</NavLink>
 
                     </Nav>
                 </Navbar.Collapse>

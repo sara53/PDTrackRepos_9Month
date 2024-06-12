@@ -23,6 +23,12 @@
       "productName": "Laptop2",
       "price": "44",
       "quantity": "55"
+    },
+    {
+      "id": "64fc",
+      "productName": "product added using toolkit",
+      "price": "99",
+      "quantity": "66"
     }
   ]
 }

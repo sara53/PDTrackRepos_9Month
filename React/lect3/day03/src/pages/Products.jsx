@@ -4,33 +4,22 @@ import { Table } from 'react-bootstrap'
 import { Link, useLoaderData } from 'react-router-dom'
 
 import { getAllProducts, deleteProduct } from '../api/productAPI'
+import { useDispatch, useSelector } from 'react-redux'
+
+import { deleteProductAction, getAllProductsAction } from '../store/productSlice'
 export function Products() {
 
-    const response = useLoaderData();
-    console.log( response )
-    let [ products, setProducts ] = useState( response.data )
+    const dispatch = useDispatch();
 
+    const { products, isLoading, error } = useSelector( state => state.productSlice )
+    useEffect( () => {
+        dispatch( getAllProductsAction() )
 
-    // useEffect( () => {
-    //     const fetchData = async () => {
-    //         try {
-    //             let response = await getAllProducts()
-    //             setProducts( response.data )
-    //         } catch ( error ) {
-    //             console.log( error )
-    //         }
-    //     }
-    //     fetchData()
-
-    // }, [] )
+    }, [] )
 
     const deleteHandler = async ( productId ) => {
-        deleteProduct( productId ).then( response => {
 
-            let filteredList = products.filter( ( product ) => product.id != productId )
-
-            setProducts( filteredList )
-        } ).catch( error => console.log( error ) )
+        dispatch( deleteProductAction( productId ) )
     }
 
     return (

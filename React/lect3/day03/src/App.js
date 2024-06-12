@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 import { getAllProducts } from "./api/productAPI";
 import { Error } from "./pages/Error";
+import { Counter } from "./pages/Counter";
 
 function App() {
 	const router = createBrowserRouter(
@@ -18,12 +19,8 @@ function App() {
 			<>
 				<Route path='/' element={<SharedLayout />}>
 					<Route index element={<Home />} />
-					<Route
-						path='products'
-						loader={getAllProducts}
-						errorElement={<Error />}
-						element={<Products />}
-					/>
+					<Route path='products' element={<Products />} />
+					<Route path='counter' element={<Counter />} />
 					<Route path='products/:id' element={<ProductDetails />} />
 					<Route path='products/:id/edit' element={<ProductForm />} />
 				</Route>

@@ -2,8 +2,12 @@ import { useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { addNewProduct, getProductById, editProduct } from '../api/productAPI'
 import { useNavigate, useParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addNewProductAction } from '../store/productSlice'
 export function ProductForm() {
 
+
+    const dispatch = useDispatch();
     let [ formData, setFormData ] = useState( {
         productName: '',
         price: '',
@@ -16,8 +20,6 @@ export function ProductForm() {
 
     useEffect( () => {
         if ( id != 0 ) {
-
-
             getProductById( id ).then( response => {
                 setFormData( response.data )
             } ).catch( error => {
@@ -42,17 +44,11 @@ export function ProductForm() {
     const addHandler = ( e ) => {
         e.preventDefault();
         if ( id == 0 ) {
-            addNewProduct( formData ).then( () => {
+            dispatch( addNewProductAction( formData ) ).then( () => {
                 navigate( '/products' )
-            } ).catch( error => {
-                console.log( error )
             } )
         } else {
-            editProduct( id, formData ).then( () => {
-                navigate( '/products' )
-            } ).catch( error => {
-                console.log( error )
-            } )
+            // edit
         }
     }
     return (
